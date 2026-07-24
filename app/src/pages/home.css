@@ -1,0 +1,6 @@
+.band {
+  transition: opacity 0.4s ease;
+}
+.band:hover {
+  opacity: 0.82;
+}

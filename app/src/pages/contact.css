@@ -1,0 +1,41 @@
+::placeholder {
+  color: #b6aabf;
+}
+.field {
+  border: none;
+  border-bottom: 1px solid #d8cce2;
+  background: transparent;
+  padding: 8px 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  color: #2a1f33;
+  outline: none;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+.field:focus {
+  border-color: #3b1e4e;
+}
+.fieldlabel {
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  color: #8b7d95;
+  text-transform: uppercase;
+}
+.send {
+  align-self: flex-start;
+  margin-top: 6px;
+  background: #3b1e4e;
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  font-family: "Nunito", sans-serif;
+  font-size: 12.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.send:hover {
+  background: #4a2660;
+}
