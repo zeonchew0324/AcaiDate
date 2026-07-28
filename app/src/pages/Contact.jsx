@@ -2,13 +2,12 @@ import { useState } from "react";
 
 const INFO = [
   {
-    ico: "📍",
     label: "Address",
     lines: ["G-12, Jalan Telawi 3", "Bangsar, 59100 Kuala Lumpur"],
   },
-  { ico: "🕗", label: "Hours", lines: ["Monday – Sunday", "8:00 – 18:00"] },
-  { ico: "📞", label: "Telephone", lines: ["+60 3-1234 5678"] },
-  { ico: "💌", label: "Email", lines: ["hello@acaidate.my"] },
+  { label: "Hours", lines: ["Monday – Sunday", "8:00 – 18:00"] },
+  { label: "Telephone", lines: ["+60 3-1234 5678"] },
+  { label: "Email", lines: ["hello@acaidate.my"] },
 ];
 
 export default function Contact() {
@@ -36,22 +35,21 @@ export default function Contact() {
   return (
     <main>
       <section className="wrap top">
-        <div className="eyebrow in">📍 Come find us</div>
-        <h1 className="up" style={{ marginTop: 22 }}>
+        <div className="eyebrow in">Come find us</div>
+        <h1 className="up" style={{ marginTop: 26 }}>
           Contact
         </h1>
-        <p className="lede" style={{ marginTop: 20, fontSize: 20 }}>
+        <p className="lede" style={{ marginTop: 24, fontSize: 20 }}>
           Pick-up only. Your bowl is made the moment you arrive.
         </p>
       </section>
 
-      <section className="wrap" style={{ paddingTop: "clamp(36px,5vw,56px)" }}>
+      <section className="wrap" style={{ paddingTop: "clamp(40px,5vw,64px)" }}>
         <div className="grid">
           {INFO.map((i) => (
-            <div key={i.label} className="card hover">
-              <span className="ico">{i.ico}</span>
-              <h3>{i.label}</h3>
-              <p>
+            <div key={i.label} className="card">
+              <span className="k">{i.label}</span>
+              <p style={{ margin: 0, color: "var(--ink)" }}>
                 {i.lines.map((l, k) => (
                   <span key={k}>
                     {l}
@@ -67,31 +65,22 @@ export default function Contact() {
       <section className="sec wrap split">
         <div>
           <div className="eyebrow">Find us</div>
-          <h2 style={{ margin: "20px 0 22px" }}>Bangsar, KL</h2>
+          <h2 style={{ margin: "24px 0 26px" }}>Bangsar, Kuala Lumpur</h2>
           <div
             className="photo"
-            style={{ minHeight: "clamp(260px,32vw,400px)" }}
+            style={{ minHeight: "clamp(260px,30vw,380px)" }}
           >
-            <span className="big" aria-hidden="true">
-              🗺️
-            </span>
-            <span className="hint">
-              [ embedded map — Bangsar, Kuala Lumpur ]
-            </span>
+            <span className="hint">[ embedded map ]</span>
           </div>
         </div>
 
         <div>
           <div className="eyebrow">Write to us</div>
-          <h2 style={{ margin: "20px 0 22px" }}>Say hi 👋</h2>
+          <h2 style={{ margin: "24px 0 26px" }}>Send a note</h2>
           {submitted ? (
             <div className="card in">
-              <span className="ico">🎉</span>
-              <h3>Thank you!</h3>
-              <p>
-                We've got your note and will reply within a day. See you at the
-                counter.
-              </p>
+              <h3>Note received</h3>
+              <p>Thanks — we'll reply within a day. See you at the counter.</p>
             </div>
           ) : (
             <form onSubmit={onSubmit} className="card">
@@ -135,7 +124,7 @@ export default function Contact() {
                 />
               </div>
               {error && <p className="err">{error}</p>}
-              <button type="submit" className="btn" style={{ marginTop: 22 }}>
+              <button type="submit" className="btn" style={{ marginTop: 24 }}>
                 Send note →
               </button>
             </form>

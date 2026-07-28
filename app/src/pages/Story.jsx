@@ -4,11 +4,11 @@ export default function Story() {
   return (
     <main>
       <section className="wrap top">
-        <div className="eyebrow in">📖 Chapter 01 — Origin</div>
-        <h1 className="up" style={{ marginTop: 22 }}>
+        <div className="eyebrow in">Chapter 01 — Origin</div>
+        <h1 className="up" style={{ marginTop: 26 }}>
           Our Story
         </h1>
-        <p className="lede" style={{ marginTop: 20, fontSize: 21 }}>
+        <p className="lede" style={{ marginTop: 24, fontSize: 20 }}>
           It began with a single bowl, shared between two people who couldn't
           agree on anything except this.
         </p>
@@ -17,7 +17,7 @@ export default function Story() {
       <section className="sec wrap split">
         <div>
           <div className="eyebrow">The first bowl</div>
-          <h2 style={{ margin: "20px 0 18px" }}>One spoonful, total silence</h2>
+          <h2 style={{ margin: "24px 0 20px" }}>One spoonful, total silence</h2>
           <p>
             We found açaí the way most people do — far from home, tired, and
             unprepared for how good something so simple could be. One spoonful
@@ -30,9 +30,6 @@ export default function Story() {
           </p>
         </div>
         <div className="photo">
-          <span className="big" aria-hidden="true">
-            🥣
-          </span>
           <span className="hint">[ founders / first shop ]</span>
         </div>
       </section>
@@ -46,27 +43,19 @@ export default function Story() {
 
       <section className="sec wrap split">
         <div className="photo" style={{ order: 2 }}>
-          <span className="big" aria-hidden="true">
-            🍨
-          </span>
           <span className="hint">[ the craft ]</span>
         </div>
         <div>
           <div className="eyebrow">The counter today</div>
-          <h2 style={{ margin: "20px 0 18px" }}>Small on purpose</h2>
+          <h2 style={{ margin: "24px 0 20px" }}>Small on purpose</h2>
           <p>
             One counter. One fruit. A short menu we'd happily eat every day. We
             kept the shop small on purpose — small enough to recognise your
             order, large enough to do it perfectly.
           </p>
-          <div
-            className="row"
-            style={{ display: "flex", gap: 14, marginTop: 26 }}
-          >
-            <Link to="/menu" className="btn">
-              See the menu →
-            </Link>
-          </div>
+          <Link to="/menu" className="btn" style={{ marginTop: 28 }}>
+            See the menu →
+          </Link>
         </div>
       </section>
     </main>

@@ -23,23 +23,23 @@ export default function Mission() {
     <main>
       <section
         className="wrap top"
-        style={{ paddingBottom: "clamp(44px,7vw,90px)" }}
+        style={{ paddingBottom: "clamp(48px,7vw,88px)" }}
       >
-        <div className="eyebrow in">💜 Our Mission</div>
+        <div className="eyebrow in">Our Mission</div>
         <h1
           className="up"
           style={{
-            marginTop: 24,
-            fontSize: "clamp(32px,5vw,64px)",
-            lineHeight: 1.16,
-            maxWidth: "20ch",
+            marginTop: 28,
+            fontSize: "clamp(32px,4.6vw,60px)",
+            lineHeight: 1.14,
+            maxWidth: "22ch",
           }}
         >
           To prove that something this{" "}
           <span style={{ color: "var(--violet)" }}>good for you</span> can also
           feel like a <span style={{ color: "var(--pink)" }}>date</span>.
         </h1>
-        <p className="lede" style={{ marginTop: 22 }}>
+        <p className="lede" style={{ marginTop: 26 }}>
           One bowl, made properly, every single day.
         </p>
       </section>
@@ -47,11 +47,11 @@ export default function Mission() {
       <section className="wrap">
         <div
           className="grid"
-          style={{ gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))" }}
+          style={{ gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}
         >
           {VALUES.map((v) => (
             <div key={v.n} className="card hover">
-              <div className="num">{v.n}</div>
+              <span className="num">{v.n}</span>
               <h3>{v.title}</h3>
               <p>{v.body}</p>
             </div>
@@ -65,7 +65,7 @@ export default function Mission() {
           <div className="by">
             Because the best thing we make can't survive the trip
           </div>
-          <Link to="/contact" className="btn ghost" style={{ marginTop: 30 }}>
+          <Link to="/contact" className="btn light" style={{ marginTop: 34 }}>
             Visit us →
           </Link>
         </div>

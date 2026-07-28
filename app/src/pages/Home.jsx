@@ -3,24 +3,24 @@ import { BOWLS } from "../bowls.js";
 
 const PERKS = [
   {
-    ico: "🎨",
+    n: "01",
     title: "Made your way",
-    body: "Pick any four toppings from a whole spread of fruit, crunch and superfoods. Your bowl, your rules.",
+    body: "Pick any four toppings from a full spread of fruit, crunch and superfoods. Your bowl, your rules.",
   },
   {
-    ico: "🎒",
+    n: "02",
     title: "Take it anywhere",
-    body: "Sealed for the go — lecture break, gym bag, picnic mat, or your desk at 2am.",
+    body: "Sealed for the go — a lecture break, the gym bag, a picnic mat, or your desk at 2am.",
   },
   {
-    ico: "⚡",
+    n: "03",
     title: "Made to order",
-    body: "Nothing pre-scooped, nothing sitting out. Your bowl gets built the second you walk in.",
+    body: "Nothing pre-scooped, nothing sitting out. Your bowl is built the moment you walk in.",
   },
   {
-    ico: "🫶",
+    n: "04",
     title: "Pick-up only",
-    body: "We don't deliver, because freshness doesn't survive the trip. Come say hi instead.",
+    body: "We don't deliver — freshness doesn't survive the trip. Come by instead.",
   },
 ];
 
@@ -37,8 +37,8 @@ export default function Home() {
     <main>
       <section className="hero wrap split">
         <div className="up">
-          <div className="eyebrow">🫐 Açaí Date</div>
-          <h1 style={{ marginTop: 22 }}>
+          <div className="eyebrow">Açaí Date</div>
+          <h1>
             Grab a bowl,
             <br />
             <em>make it a date.</em>
@@ -56,15 +56,13 @@ export default function Home() {
               Where to find us
             </Link>
           </div>
-          <div className="stickers">
-            <span className="sticker">4 toppings, your call</span>
-            <span className="sticker b">Pick-up only</span>
+          <div className="meta">
+            Any four toppings · Pick-up only · Bangsar, KL
           </div>
         </div>
         <div className="heroart">
-          <div className="fruit">🍧</div>
-          <span className="chip">Blended fresh 💜</span>
-          <span className="chip">Any 4 toppings ✨</span>
+          <span className="tagpill">Any four toppings</span>
+          <span className="hint">[ hero photography ]</span>
         </div>
       </section>
 
@@ -78,18 +76,18 @@ export default function Home() {
       </div>
 
       <section className="sec wrap">
-        <div className="eyebrow">The Açaí Date idea</div>
-        <h2 style={{ margin: "22px 0 0", maxWidth: "18ch" }}>
+        <div className="eyebrow">The idea</div>
+        <h2 style={{ margin: "24px 0 0", maxWidth: "20ch" }}>
           Every bowl is a reason to slow down.
         </h2>
-        <p className="lede" style={{ marginTop: 18 }}>
-          A date with your partner, your friends, or simply yourself. Here's
-          what you get either way.
+        <p className="lede" style={{ marginTop: 20 }}>
+          A date with your partner, your friends, or simply yourself. Either
+          way, here's what you get.
         </p>
-        <div className="grid" style={{ marginTop: 40 }}>
+        <div className="grid" style={{ marginTop: 44 }}>
           {PERKS.map((p) => (
             <div key={p.title} className="card hover">
-              <span className="ico">{p.ico}</span>
+              <span className="num">{p.n}</span>
               <h3>{p.title}</h3>
               <p>{p.body}</p>
             </div>
@@ -99,7 +97,7 @@ export default function Home() {
 
       <section className="wrap sec-b">
         <div className="eyebrow">The line-up</div>
-        <h2 style={{ margin: "22px 0 34px" }}>Four bowls, zero bad choices</h2>
+        <h2 style={{ margin: "24px 0 36px" }}>Four bowls, one short menu</h2>
         <div className="grid">
           {BOWLS.map((b) => (
             <Link
@@ -114,7 +112,8 @@ export default function Home() {
                 "--accent": b.accent,
               }}
             >
-              <div className="disc">{b.emoji}</div>
+              <div className="disc"></div>
+              <div className="n">{b.n}</div>
               <h3>{b.name}</h3>
               <span className="tag">{b.tag}</span>
             </Link>
@@ -124,9 +123,6 @@ export default function Home() {
 
       <section className="wrap sec-b">
         <Link to="/menu" className="band">
-          <span className="em" aria-hidden="true">
-            🥣
-          </span>
           <div>
             <div className="eyebrow">The collection</div>
             <h2>

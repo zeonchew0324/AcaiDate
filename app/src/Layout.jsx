@@ -13,7 +13,7 @@ export default function Layout({ children }) {
     <>
       <header className="topbar">
         <Link to="/" className="brand">
-          <span>🫐</span> Açaí Date
+          <i></i> Açaí Date
         </Link>
         <nav className="navpills">
           {NAV.map(([to, label]) => (
@@ -33,7 +33,7 @@ export default function Layout({ children }) {
         <div className="wrap">
           <div className="grid">
             <div>
-              <h3>Açaí Date 🫐</h3>
+              <div className="fbrand">Açaí Date</div>
               <p>Take a date anywhere.</p>
             </div>
             <div>
@@ -53,7 +53,7 @@ export default function Layout({ children }) {
               </p>
             </div>
             <div>
-              <div className="k">Say hi</div>
+              <div className="k">Contact</div>
               <p>
                 <a href="mailto:hello@acaidate.my">hello@acaidate.my</a>
               </p>

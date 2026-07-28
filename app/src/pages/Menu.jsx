@@ -66,7 +66,7 @@ export default function Menu() {
 
         <div className="wrap menugrid">
           <div>
-            <div className="eyebrow">{bowl.emoji} The bowls</div>
+            <div className="eyebrow">{bowl.n} · The bowls</div>
             <h1>{bowl.name}</h1>
             <p className="desc">{bowl.body}</p>
 
@@ -75,20 +75,18 @@ export default function Menu() {
                 <button
                   key={b.name}
                   className={"chip" + (i === active ? " on" : "")}
-                  style={vars(b)}
                   aria-pressed={i === active}
                   onClick={() => select(i)}
                 >
-                  <span aria-hidden="true">{b.emoji}</span>
                   {b.name}
                 </button>
               ))}
             </div>
 
-            <div className="menunote">
+            <div className="menunote meta">
               Any four toppings · pick-up only · made when you arrive
             </div>
-            <Link to="/contact" className="btn" style={{ marginTop: 26 }}>
+            <Link to="/contact" className="btn" style={{ marginTop: 30 }}>
               Come grab one →
             </Link>
           </div>
@@ -102,7 +100,7 @@ export default function Menu() {
                 style={vars(b)}
               >
                 {/* placeholder — swap for <img> when bowl photos exist */}
-                <span aria-hidden="true">{b.emoji}</span>
+                <span>[ {b.name} ]</span>
               </div>
             ))}
           </div>
