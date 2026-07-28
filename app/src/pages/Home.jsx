@@ -1,192 +1,141 @@
 import { Link } from "react-router-dom";
-import { css } from "../css.js";
-import "./home.css";
+import { BOWLS } from "../bowls.js";
+
+const PERKS = [
+  {
+    ico: "🎨",
+    title: "Made your way",
+    body: "Pick any four toppings from a whole spread of fruit, crunch and superfoods. Your bowl, your rules.",
+  },
+  {
+    ico: "🎒",
+    title: "Take it anywhere",
+    body: "Sealed for the go — lecture break, gym bag, picnic mat, or your desk at 2am.",
+  },
+  {
+    ico: "⚡",
+    title: "Made to order",
+    body: "Nothing pre-scooped, nothing sitting out. Your bowl gets built the second you walk in.",
+  },
+  {
+    ico: "🫶",
+    title: "Pick-up only",
+    body: "We don't deliver, because freshness doesn't survive the trip. Come say hi instead.",
+  },
+];
+
+const TICKER = [
+  "Take a date anywhere",
+  "Made to order",
+  "Pick-up only",
+  "Bangsar, KL",
+  "Open 8–18h daily",
+];
 
 export default function Home() {
   return (
     <main>
-      {/* HERO: EDITORIAL */}
-      <section
-        style={css(
-          "position: relative; min-height: 100vh; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: clamp(40px, 7vw, 110px)",
-        )}
-      >
-        <div
-          style={css(
-            "position: absolute; top: -20%; right: -10%; width: 60%; height: 80%; background: radial-gradient(circle, rgba(91,26,138,0.05), transparent 70%); pointer-events: none",
-          )}
-        ></div>
-        <div
-          style={css(
-            "position: absolute; top: clamp(40px,7vw,110px); left: clamp(40px,7vw,110px); font-size: 11px; letter-spacing: 0.4em; color: #E5189A; text-transform: uppercase; animation: vlFade 1.2s ease both",
-          )}
-        >
-          Açaí Date · Take a Date Anywhere
-        </div>
-        <div style={css("max-width: 760px; animation: vlFadeUp 1s ease both")}>
-          <h1
-            style={css(
-              "font-family: 'Quicksand', sans-serif; font-weight: 500; color: #3B1E4E; font-size: clamp(40px, 6.6vw, 96px); line-height: 1.04; letter-spacing: 0.005em; margin: 0",
-            )}
-          >
+      <section className="hero wrap split">
+        <div className="up">
+          <div className="eyebrow">🫐 Açaí Date</div>
+          <h1 style={{ marginTop: 22 }}>
             Grab a bowl,
             <br />
-            <span style={css("font-style: italic")}>make it a date.</span>
+            <em>make it a date.</em>
           </h1>
-          <p
-            style={css(
-              "color: #5A4F63; font-size: clamp(14px, 1.4vw, 17px); font-weight: 400; line-height: 1.8; letter-spacing: 0.02em; max-width: 440px; margin: 34px 0 0",
-            )}
-          >
-            Healthy, customizable açaí bowls, made to grab and go. Take your
+          <p className="lede">
+            Healthy, build-your-own açaí bowls made to grab and go. Take your
             date anywhere — a picnic, a study break, a gym recovery, or a quiet
-            moment with yourself.
+            ten minutes with yourself.
           </p>
-          <div
-            style={css(
-              "display: flex; align-items: center; gap: 34px; margin-top: 48px; flex-wrap: wrap",
-            )}
-          >
-            <Link to="/menu" className="cta">
-              View the Menu <span style={css("font-size: 16px")}>→</span>
+          <div className="row">
+            <Link to="/menu" className="btn">
+              See the bowls →
             </Link>
-            <span
-              style={css(
-                "font-size: 11px; letter-spacing: 0.3em; color: #8B7D95; text-transform: uppercase",
-              )}
+            <Link to="/contact" className="btn ghost">
+              Where to find us
+            </Link>
+          </div>
+          <div className="stickers">
+            <span className="sticker">4 toppings, your call</span>
+            <span className="sticker b">Pick-up only</span>
+          </div>
+        </div>
+        <div className="heroart">
+          <div className="fruit">🍧</div>
+          <span className="chip">Blended fresh 💜</span>
+          <span className="chip">Any 4 toppings ✨</span>
+        </div>
+      </section>
+
+      <div className="marquee" aria-hidden="true">
+        {/* duplicated once so the -50% translate loops seamlessly */}
+        <div>
+          {[...TICKER, ...TICKER].map((t, i) => (
+            <b key={i}>{t}</b>
+          ))}
+        </div>
+      </div>
+
+      <section className="sec wrap">
+        <div className="eyebrow">The Açaí Date idea</div>
+        <h2 style={{ margin: "22px 0 0", maxWidth: "18ch" }}>
+          Every bowl is a reason to slow down.
+        </h2>
+        <p className="lede" style={{ marginTop: 18 }}>
+          A date with your partner, your friends, or simply yourself. Here's
+          what you get either way.
+        </p>
+        <div className="grid" style={{ marginTop: 40 }}>
+          {PERKS.map((p) => (
+            <div key={p.title} className="card hover">
+              <span className="ico">{p.ico}</span>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="wrap sec-b">
+        <div className="eyebrow">The line-up</div>
+        <h2 style={{ margin: "22px 0 34px" }}>Four bowls, zero bad choices</h2>
+        <div className="grid">
+          {BOWLS.map((b) => (
+            <Link
+              key={b.name}
+              to="/menu"
+              className="bowlcard"
+              style={{
+                "--tintA": b.tintA,
+                "--tintB": b.tintB,
+                "--bowlA": b.bowlA,
+                "--bowlB": b.bowlB,
+                "--accent": b.accent,
+              }}
             >
-              Pick-up only
-            </span>
-          </div>
-        </div>
-        <div
-          style={css(
-            "position: absolute; bottom: 22px; right: 26px; font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 11px; letter-spacing: 0.04em; color: #B6AABF",
-          )}
-        >
-          [ replace with hero photography ]
+              <div className="disc">{b.emoji}</div>
+              <h3>{b.name}</h3>
+              <span className="tag">{b.tag}</span>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* INTRO STRIP */}
-      <section
-        style={css(
-          "padding: clamp(64px, 9vw, 140px) clamp(40px, 7vw, 110px); display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(36px, 5vw, 80px); align-items: start",
-        )}
-      >
-        <div style={css("grid-column: 1 / -1; max-width: 620px")}>
-          <div
-            style={css(
-              "font-size: 11px; letter-spacing: 0.4em; color: #E5189A; text-transform: uppercase; margin-bottom: 26px",
-            )}
-          >
-            The Açaí Date Idea
-          </div>
-          <p
-            style={css(
-              "font-family: 'Quicksand', sans-serif; font-weight: 500; font-size: clamp(24px, 3vw, 38px); line-height: 1.4; color: #2A1F33; margin: 0",
-            )}
-          >
-            Every bowl is a reason to slow down — a date with your partner, your
-            friends, or simply yourself.
-          </p>
-        </div>
-        <div>
-          <div
-            style={css(
-              "font-size: 12.5px; letter-spacing: 0.3em; color: #3B1E4E; text-transform: uppercase; margin-bottom: 14px",
-            )}
-          >
-            Made Your Way
-          </div>
-          <p
-            style={css(
-              "font-size: 16px; font-weight: 400; line-height: 1.85; color: #5A4F63; margin: 0",
-            )}
-          >
-            Build your own from a spread of fruits, crunch and superfoods. Any
-            four toppings, your call.
-          </p>
-        </div>
-        <div>
-          <div
-            style={css(
-              "font-size: 12.5px; letter-spacing: 0.3em; color: #3B1E4E; text-transform: uppercase; margin-bottom: 14px",
-            )}
-          >
-            Take It Anywhere
-          </div>
-          <p
-            style={css(
-              "font-size: 16px; font-weight: 400; line-height: 1.85; color: #5A4F63; margin: 0",
-            )}
-          >
-            Sealed for the go — picnic, study session, gym bag or desk. Your
-            date travels with you.
-          </p>
-        </div>
-        <div>
-          <div
-            style={css(
-              "font-size: 12.5px; letter-spacing: 0.3em; color: #3B1E4E; text-transform: uppercase; margin-bottom: 14px",
-            )}
-          >
-            Pick-up Only
-          </div>
-          <p
-            style={css(
-              "font-size: 16px; font-weight: 400; line-height: 1.85; color: #5A4F63; margin: 0",
-            )}
-          >
-            Made the moment you arrive. We don't deliver — freshness doesn't
-            travel well.
-          </p>
-        </div>
-      </section>
-
-      {/* EDITORIAL IMAGE BAND */}
-      <section
-        style={css(
-          "padding: 0 clamp(40px, 7vw, 110px) clamp(64px, 9vw, 140px)",
-        )}
-      >
-        <Link
-          to="/menu"
-          className="band"
-          style={css(
-            "text-decoration: none; position: relative; height: clamp(320px, 52vw, 620px); background: repeating-linear-gradient(135deg, #efe9f3, #efe9f3 16px, #e9e1ef 16px, #e9e1ef 32px); border: 1px solid #E6DEEC; display: flex; align-items: flex-end; justify-content: space-between; padding: clamp(28px, 4vw, 56px)",
-          )}
-        >
+      <section className="wrap sec-b">
+        <Link to="/menu" className="band">
+          <span className="em" aria-hidden="true">
+            🥣
+          </span>
           <div>
-            <div
-              style={css(
-                "font-size: 11px; letter-spacing: 0.4em; color: #E5189A; text-transform: uppercase; margin-bottom: 14px",
-              )}
-            >
-              The Collection
-            </div>
-            <div
-              style={css(
-                "font-family: 'Quicksand', sans-serif; font-size: clamp(28px, 4vw, 52px); color: #3B1E4E; line-height: 1.1",
-              )}
-            >
-              Discover the bowls
-            </div>
+            <div className="eyebrow">The collection</div>
+            <h2>
+              Discover
+              <br />
+              the bowls
+            </h2>
           </div>
-          <span
-            style={css(
-              "font-size: 13px; letter-spacing: 0.26em; color: #3B1E4E; text-transform: uppercase; white-space: nowrap",
-            )}
-          >
-            View Menu →
-          </span>
-          <span
-            style={css(
-              "position: absolute; top: 18px; left: 20px; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #9A8BA6",
-            )}
-          >
-            [ editorial — signature bowl ]
-          </span>
+          <span className="go">View menu →</span>
         </Link>
       </section>
     </main>
