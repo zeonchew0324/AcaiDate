@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import { ORDER_URL } from "./order.js";
 
 const NAV = [
   ["/", "Home"],
@@ -22,9 +23,9 @@ export default function Layout({ children }) {
             </NavLink>
           ))}
         </nav>
-        <Link to="/contact" className="btn sm">
-          Find us
-        </Link>
+        <a href={ORDER_URL} target="_blank" rel="noreferrer" className="btn sm">
+          Order now
+        </a>
       </header>
 
       {children}

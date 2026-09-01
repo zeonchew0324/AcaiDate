@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import { BOWLS } from "../bowls.js";
+import { ORDER_URL } from "../order.js";
 
 const vars = (b) => ({
   "--tintA": b.tintA,
@@ -86,9 +86,15 @@ export default function Menu() {
             <div className="menunote meta">
               Any four toppings · pick-up only · made when you arrive
             </div>
-            <Link to="/contact" className="btn" style={{ marginTop: 30 }}>
-              Come grab one →
-            </Link>
+            <a
+              href={ORDER_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+              style={{ marginTop: 30 }}
+            >
+              Order now →
+            </a>
           </div>
 
           <div className="bowls">
