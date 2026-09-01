@@ -1,10 +1,6 @@
 import { useState } from "react";
 
 const INFO = [
-  {
-    label: "Address",
-    lines: ["G-12, Jalan Telawi 3", "Bangsar, 59100 Kuala Lumpur"],
-  },
   { label: "Hours", lines: ["Monday – Sunday", "8:00 – 18:00"] },
   { label: "Telephone", lines: ["+60 3-1234 5678"] },
   { label: "Email", lines: ["hello@acaidate.my"] },

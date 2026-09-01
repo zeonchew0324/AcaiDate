@@ -37,25 +37,11 @@ export default function Layout({ children }) {
               <p>Take a date anywhere.</p>
             </div>
             <div>
-              <div className="k">Pick-up only</div>
-              <p>
-                G-12, Jalan Telawi 3
-                <br />
-                Bangsar, 59100 Kuala Lumpur
-              </p>
-            </div>
-            <div>
               <div className="k">Open daily</div>
               <p>
                 Mon–Sun · 8am – 6pm
                 <br />
                 +60 3-1234 5678
-              </p>
-            </div>
-            <div>
-              <div className="k">Contact</div>
-              <p>
-                <a href="mailto:hello@acaidate.my">hello@acaidate.my</a>
               </p>
             </div>
           </div>
