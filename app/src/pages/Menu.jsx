@@ -99,8 +99,13 @@ export default function Menu() {
                 ref={(el) => (frames.current[i] = el)}
                 style={vars(b)}
               >
-                {/* placeholder — swap for <img> when bowl photos exist */}
-                <span>[ {b.name} ]</span>
+                <div className="bowl-outline"></div>
+                <div className="bowl-photo">
+                  {/* placeholder — swap for <img src={b.photo} alt={b.name} /> when bowl photos exist */}
+                  <span>[ {b.name} ]</span>
+                </div>
+                <i className="bowl-diamond a"></i>
+                <i className="bowl-diamond b"></i>
               </div>
             ))}
           </div>
