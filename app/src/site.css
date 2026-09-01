@@ -607,24 +607,6 @@ p {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
 }
-.bowl-diamond {
-  position: absolute;
-  transform: rotate(45deg);
-}
-.bowl-diamond.a {
-  right: 8px;
-  top: 26px;
-  width: 13px;
-  height: 13px;
-  background: var(--brand);
-}
-.bowl-diamond.b {
-  left: 2px;
-  bottom: 30px;
-  width: 9px;
-  height: 9px;
-  background: var(--accent);
-}
 
 /* ── quote ──────────────────────────────────────────────── */
 .quote {
@@ -763,18 +745,6 @@ textarea.field {
   .bowl-outline {
     left: -9px;
     top: 7px;
-  }
-  .bowl-diamond.a {
-    right: 4px;
-    top: 12px;
-    width: 9px;
-    height: 9px;
-  }
-  .bowl-diamond.b {
-    left: 0;
-    bottom: 14px;
-    width: 7px;
-    height: 7px;
   }
   .menuhero {
     min-height: 0;
