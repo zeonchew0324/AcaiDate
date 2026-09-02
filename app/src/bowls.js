@@ -5,6 +5,7 @@ export const BOWLS = [
     name: "Basic Bitch",
     body: "Banana, blueberries, kiwi, goji berries, cacao nibs.",
     tag: "Crowd favourite",
+    photo: "/bowls/basic-bitch.jpg",
     accent: "#C0246B",
     tintA: "#F6EDF2",
     tintB: "#EDDDE7",
@@ -14,8 +15,9 @@ export const BOWLS = [
   {
     n: "02",
     name: "The Paradise Bowl",
-    body: "Mango, pineapple, banana, coconut flakes, passion fruit.",
+    body: "Mango, banana, coconut flakes, passion fruit, goji berries.",
     tag: "Tropical escape",
+    photo: "/bowls/paradise-bowl.jpg",
     accent: "#CE2E86",
     tintA: "#FAE7F0",
     tintB: "#F4D2E4",

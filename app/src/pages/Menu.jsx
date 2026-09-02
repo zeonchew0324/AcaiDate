@@ -107,8 +107,15 @@ export default function Menu() {
               >
                 <div className="bowl-outline"></div>
                 <div className="bowl-photo">
-                  {/* placeholder — swap for <img src={b.photo} alt={b.name} /> when bowl photos exist */}
+                  {/* placeholder shows until b.photo exists (img hides itself if the file is missing) */}
                   <span>[ {b.name} ]</span>
+                  {b.photo && (
+                    <img
+                      src={b.photo}
+                      alt={b.name}
+                      onError={(e) => (e.currentTarget.hidden = true)}
+                    />
+                  )}
                 </div>
               </div>
             ))}
