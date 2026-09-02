@@ -9,12 +9,16 @@ const HERO_PHOTOS = [
     alt: "Açaí bowl topped with strawberries and blueberries",
   },
   {
-    src: "/bowls/basic-bitch.jpg",
-    alt: "Basic Bitch — strawberries, blueberries, kiwi and goji berries",
+    src: "/bowls/home2.jpg",
+    alt: "Basic Bitch and Paradise Bowl",
   },
   {
-    src: "/bowls/paradise-bowl.jpg",
-    alt: "The Paradise Bowl — mango, coconut flakes and passion fruit",
+    src: "/bowls/home3.jpg",
+    alt: "Basic Bitch solo pic",
+  },
+  {
+    src: "/bowls/home4.jpg",
+    alt: "The Paradise Bowl solo pic",
   },
 ];
 
