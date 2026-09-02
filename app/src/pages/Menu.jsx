@@ -105,21 +105,17 @@ export default function Menu() {
                 ref={(el) => (frames.current[i] = el)}
                 style={vars(b)}
               >
-                <div className="bowl-outline"></div>
-                <div className="bowl-photo">
-                  {/* placeholder shows until b.photo exists (img hides itself if the file is missing) */}
-                  <span>[ {b.name} ]</span>
-                  {b.photo && (
+                {/* bowls without a photo show no frame at all */}
+                {b.photo && (
+                  <div className="bowl-photo">
+                    <span>[ {b.name} ]</span>
                     <img
                       src={b.photo}
                       alt={b.name}
-                      style={
-                        b.photoPos ? { objectPosition: b.photoPos } : undefined
-                      }
                       onError={(e) => (e.currentTarget.hidden = true)}
                     />
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

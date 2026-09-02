@@ -573,18 +573,6 @@ p {
   position: relative;
   opacity: 1;
 }
-/* hand-drawn offset outline echoing the photo blob */
-.bowl-outline {
-  position: absolute;
-  left: -18px;
-  top: 14px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--accent);
-  opacity: 0.4;
-  border-radius: var(--r);
-  transform: rotate(-5deg);
-}
 /* card holding the bowl photo — the photo's own ratio sets its height */
 .bowl-photo {
   position: relative;
@@ -752,10 +740,6 @@ textarea.field {
   .bowls {
     max-width: 230px;
     order: -1;
-  }
-  .bowl-outline {
-    left: -9px;
-    top: 7px;
   }
   .menuhero {
     min-height: 0;
