@@ -61,7 +61,7 @@ export default function Home() {
         </div>
         <div className="heroart">
           <img
-            src="/bowls/basic-bitch.jpg"
+            src="/bowls/home.jpg"
             alt="Açaí bowl topped with strawberries and blueberries"
             onError={(e) => (e.currentTarget.hidden = true)}
           />
