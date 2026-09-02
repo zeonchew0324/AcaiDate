@@ -22,4 +22,15 @@ export const BOWLS = [
     bowlA: "#E0A45C",
     bowlB: "#6E3D12",
   },
+  {
+    n: "03",
+    name: "My Ideal Type",
+    body: "Your bowl, your rules — pick any four toppings.",
+    tag: "Build your own",
+    accent: "#5B2BAE",
+    tintA: "#F1EDF7",
+    tintB: "#E3DAEF",
+    bowlA: "#9B7BD4",
+    bowlB: "#34195C",
+  },
 ];

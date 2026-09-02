@@ -97,7 +97,7 @@ export default function Home() {
 
       <section className="wrap sec-b">
         <div className="eyebrow">The line-up</div>
-        <h2 style={{ margin: "24px 0 36px" }}>Two bowls, one short menu</h2>
+        <h2 style={{ margin: "24px 0 36px" }}>Three bowls, one short menu</h2>
         <div className="grid">
           {BOWLS.map((b) => (
             <Link
