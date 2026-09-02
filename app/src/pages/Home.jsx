@@ -65,7 +65,6 @@ export default function Home() {
             alt="Açaí bowl topped with strawberries and blueberries"
             onError={(e) => (e.currentTarget.hidden = true)}
           />
-          <span className="tagpill">Any four toppings</span>
           <span className="hint">[ hero photography ]</span>
         </div>
       </section>
