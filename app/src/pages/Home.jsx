@@ -96,32 +96,6 @@ export default function Home() {
       </section>
 
       <section className="wrap sec-b">
-        <div className="eyebrow">The line-up</div>
-        <h2 style={{ margin: "24px 0 36px" }}>Three bowls, one short menu</h2>
-        <div className="grid">
-          {BOWLS.map((b) => (
-            <Link
-              key={b.name}
-              to="/menu"
-              className="bowlcard"
-              style={{
-                "--tintA": b.tintA,
-                "--tintB": b.tintB,
-                "--bowlA": b.bowlA,
-                "--bowlB": b.bowlB,
-                "--accent": b.accent,
-              }}
-            >
-              <div className="disc"></div>
-              <div className="n">{b.n}</div>
-              <h3>{b.name}</h3>
-              <span className="tag">{b.tag}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="wrap sec-b">
         <Link to="/menu" className="band">
           <div>
             <div className="eyebrow">The collection</div>
