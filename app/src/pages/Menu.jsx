@@ -113,6 +113,9 @@ export default function Menu() {
                     <img
                       src={b.photo}
                       alt={b.name}
+                      style={
+                        b.photoPos ? { objectPosition: b.photoPos } : undefined
+                      }
                       onError={(e) => (e.currentTarget.hidden = true)}
                     />
                   )}
