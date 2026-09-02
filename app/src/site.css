@@ -511,6 +511,8 @@ p {
 .menugrid h1 {
   font-size: clamp(38px, 5.2vw, 68px);
   margin: 22px 0 0;
+  /* reserve two lines so short titles don't shift the chips below */
+  min-height: 2.08em;
 }
 .menugrid .desc {
   font-size: clamp(16px, 1.4vw, 18px);
@@ -518,6 +520,7 @@ p {
   color: var(--ink);
   max-width: 40ch;
   margin: 20px 0 0;
+  min-height: 3.4em;
 }
 .chips {
   display: flex;
