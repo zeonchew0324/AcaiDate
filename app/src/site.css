@@ -581,14 +581,14 @@ p {
   height: 100%;
   border: 2px solid var(--accent);
   opacity: 0.4;
-  border-radius: 52% 48% 44% 56% / 55% 46% 54% 45%;
+  border-radius: var(--r);
   transform: rotate(-5deg);
 }
 /* organic blob mask holding the bowl photo */
 .bowl-photo {
   position: absolute;
   inset: 0;
-  border-radius: 58% 42% 55% 45% / 48% 58% 42% 52%;
+  border-radius: var(--r);
   overflow: hidden;
   background: radial-gradient(circle at 36% 30%, var(--bowlA), var(--bowlB));
   box-shadow: 0 40px 70px -34px rgba(32, 21, 36, 0.6);
