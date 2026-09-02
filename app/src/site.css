@@ -375,10 +375,63 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: 50% 70%;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.heroart img.on {
+  opacity: 1;
 }
 /* the placeholder hint only shows while there is no photo */
 .heroart:has(img:not([hidden])) .hint {
   display: none;
+}
+/* hero carousel controls */
+.heroart .heronav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--brand);
+  font-size: 22px;
+  line-height: 1;
+  padding-bottom: 3px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.heroart .heronav:hover {
+  background: #fff;
+}
+.heroart .heronav.prev {
+  left: 14px;
+}
+.heroart .heronav.next {
+  right: 14px;
+}
+.heroart .herodots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 7px;
+}
+.heroart .herodots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  transition: background 0.2s ease;
+}
+.heroart .herodots i.on {
+  background: #fff;
 }
 .heroart::after {
   content: "";
