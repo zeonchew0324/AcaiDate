@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { BOWLS } from "../bowls.js";
 
 const PERKS = [
   {
@@ -61,6 +60,11 @@ export default function Home() {
           </div>
         </div>
         <div className="heroart">
+          <img
+            src="/bowls/basic-bitch.jpg"
+            alt="Açaí bowl topped with strawberries and blueberries"
+            onError={(e) => (e.currentTarget.hidden = true)}
+          />
           <span className="tagpill">Any four toppings</span>
           <span className="hint">[ hero photography ]</span>
         </div>
