@@ -556,7 +556,6 @@ p {
 }
 .bowls {
   position: relative;
-  aspect-ratio: 1;
   max-width: 480px;
   width: 100%;
   margin: 0 auto;
@@ -568,8 +567,10 @@ p {
   transform-origin: bottom right;
   opacity: 0;
 }
-/* CSS keeps the active bowl visible; the JS roll is only the transition */
+/* CSS keeps the active bowl visible; the JS roll is only the transition.
+   The active frame sits in flow so the photo's own ratio sizes .bowls. */
 .bowlframe.on {
+  position: relative;
   opacity: 1;
 }
 /* hand-drawn offset outline echoing the photo blob */
@@ -584,26 +585,33 @@ p {
   border-radius: var(--r);
   transform: rotate(-5deg);
 }
-/* organic blob mask holding the bowl photo */
+/* card holding the bowl photo — the photo's own ratio sets its height */
 .bowl-photo {
-  position: absolute;
-  inset: 0;
+  position: relative;
   border-radius: var(--r);
   overflow: hidden;
   background: radial-gradient(circle at 36% 30%, var(--bowlA), var(--bowlB));
   box-shadow: 0 40px 70px -34px rgba(32, 21, 36, 0.6);
-  display: grid;
-  place-items: end center;
-  padding-bottom: 11%;
+  aspect-ratio: 1;
+}
+/* a loaded photo replaces the square placeholder ratio with its own */
+.bowl-photo:has(img:not([hidden])) {
+  aspect-ratio: auto;
+}
+.bowl-photo:has(img:not([hidden])) span {
+  display: none;
 }
 .bowl-photo img {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 .bowl-photo span {
+  position: absolute;
+  left: 50%;
+  bottom: 11%;
+  transform: translateX(-50%);
+  white-space: nowrap;
   font-size: 11.5px;
   font-weight: 500;
   letter-spacing: 0.14em;
