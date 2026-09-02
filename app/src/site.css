@@ -374,6 +374,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 70%;
 }
 /* the placeholder hint only shows while there is no photo */
 .heroart:has(img:not([hidden])) .hint {

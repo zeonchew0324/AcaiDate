@@ -3,7 +3,7 @@ export const BOWLS = [
   {
     n: "01",
     name: "Basic Bitch",
-    body: "Banana, blueberries, kiwi, goji berries, cacao nibs.",
+    body: "Strawberries, blueberries, kiwi, goji berries, cacao nibs.",
     tag: "Crowd favourite",
     photo: "/bowls/basic-bitch.jpg",
     accent: "#C0246B",

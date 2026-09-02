@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ORDER_URL } from "../order.js";
 
 const PERKS = [
   {
@@ -23,13 +24,7 @@ const PERKS = [
   },
 ];
 
-const TICKER = [
-  "Take a date anywhere",
-  "Made to order",
-  "Pick-up only",
-  "Bangsar, KL",
-  "Open 8–18h daily",
-];
+const TICKER = ["Take a date anywhere", "Pick-up only", "Order now!"];
 
 export default function Home() {
   return (
@@ -48,15 +43,20 @@ export default function Home() {
             ten minutes with yourself.
           </p>
           <div className="row">
-            <Link to="/menu" className="btn">
+            <Link to="/menu" className="btn ghost">
               See the bowls →
             </Link>
-            <Link to="/contact" className="btn ghost">
-              Where to find us
-            </Link>
+            <a
+              href={ORDER_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
+              Order now →
+            </a>
           </div>
           <div className="meta">
-            Any four toppings · Pick-up only · Bangsar, KL
+            Choose any four toppings · Pick-up only · Bangsar, KL
           </div>
         </div>
         <div className="heroart">
