@@ -1,0 +1,38 @@
+// one bowl list, used by the menu and the home line-up
+export const BOWLS = [
+  {
+    n: "01",
+    name: "Basic Bitch",
+    body: "Strawberries, blueberries, kiwi, goji berries, cacao nibs.",
+    tag: "Crowd favourite",
+    photo: "/bowls/basic-bitch.jpg",
+    accent: "#C0246B",
+    tintA: "#F6EDF2",
+    tintB: "#EDDDE7",
+    bowlA: "#E0699F",
+    bowlB: "#6E1B46",
+  },
+  {
+    n: "02",
+    name: "The Paradise Bowl",
+    body: "Mango, banana, coconut flakes, passion fruit, goji berries.",
+    tag: "Tropical escape",
+    photo: "/bowls/paradise-bowl.jpg",
+    accent: "#CE2E86",
+    tintA: "#FAE7F0",
+    tintB: "#F4D2E4",
+    bowlA: "#F284BE",
+    bowlB: "#86215A",
+  },
+  {
+    n: "03",
+    name: "My Ideal Type",
+    body: "Your bowl, your rules — pick any four toppings.",
+    tag: "Build your own",
+    accent: "#5B2BAE",
+    tintA: "#F1EDF7",
+    tintB: "#E3DAEF",
+    bowlA: "#9B7BD4",
+    bowlB: "#34195C",
+  },
+];

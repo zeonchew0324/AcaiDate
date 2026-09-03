@@ -1,148 +1,74 @@
 import { Link } from "react-router-dom";
-import { css } from "../css.js";
+
+const VALUES = [
+  {
+    n: "01",
+    title: "Made your way",
+    body: "Choose any four toppings and build the bowl that is yours. Customization is the whole point.",
+  },
+  {
+    n: "02",
+    title: "Made to order",
+    body: "Nothing is pre-scooped or sitting out. Your bowl is built when you walk in — which is exactly why we don't deliver.",
+  },
+  {
+    n: "03",
+    title: "Take it anywhere",
+    body: "Grab-and-go and sealed for the journey — a picnic, a study session, a gym recovery, or time with yourself.",
+  },
+];
 
 export default function Mission() {
   return (
     <main>
-      {/* STATEMENT HERO */}
       <section
-        style={css(
-          "min-height: 86vh; display: flex; flex-direction: column; justify-content: center; padding: clamp(70px, 10vw, 150px) clamp(40px, 7vw, 110px)",
-        )}
+        className="wrap top"
+        style={{ paddingBottom: "clamp(48px,7vw,88px)" }}
       >
-        <div
-          style={css(
-            "font-size: 11px; letter-spacing: 0.4em; color: #E5189A; text-transform: uppercase; margin-bottom: 34px; animation: vlFade 1s ease both",
-          )}
-        >
-          Our Mission
-        </div>
+        <div className="eyebrow in">Our Mission</div>
         <h1
-          style={css(
-            "font-family: 'Quicksand', sans-serif; font-weight: 500; color: #3B1E4E; font-size: clamp(32px, 5.4vw, 84px); line-height: 1.18; max-width: 1000px; margin: 0; animation: vlFadeUp 1s ease both",
-          )}
+          className="up"
+          style={{
+            marginTop: 28,
+            fontSize: "clamp(32px,4.6vw,60px)",
+            lineHeight: 1.14,
+            maxWidth: "22ch",
+          }}
         >
           To prove that something this{" "}
-          <span style={css("font-style: italic; color: #8B3FD9")}>
-            good for you
-          </span>{" "}
-          can also feel like a{" "}
-          <span style={css("font-style: italic; color: #E5189A")}>date</span> —
-          one bowl, made properly, every single day.
+          <span style={{ color: "var(--violet)" }}>good for you</span> can also
+          feel like a <span style={{ color: "var(--pink)" }}>date</span>.
         </h1>
+        <p className="lede" style={{ marginTop: 26 }}>
+          One bowl, made properly, every single day.
+        </p>
       </section>
 
-      {/* VALUES */}
-      <section style={css("border-top: 1px solid #ECE6F0")}>
+      <section className="wrap">
         <div
-          style={css(
-            "display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))",
-          )}
+          className="grid"
+          style={{ gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))" }}
         >
-          <div
-            style={css(
-              "padding: clamp(40px, 5vw, 70px) clamp(36px, 5vw, 64px); border-right: 1px solid #ECE6F0; border-bottom: 1px solid #ECE6F0",
-            )}
-          >
-            <div
-              style={css(
-                "font-family: 'Quicksand', sans-serif; font-size: 40px; color: #E5189A; margin-bottom: 22px",
-              )}
-            >
-              01
+          {VALUES.map((v) => (
+            <div key={v.n} className="card hover">
+              <span className="num">{v.n}</span>
+              <h3>{v.title}</h3>
+              <p>{v.body}</p>
             </div>
-            <div
-              style={css(
-                "font-size: 13px; letter-spacing: 0.28em; color: #3B1E4E; text-transform: uppercase; margin-bottom: 16px",
-              )}
-            >
-              Made Your Way
-            </div>
-            <p
-              style={css(
-                "font-size: 16px; font-weight: 400; line-height: 1.9; color: #5A4F63; margin: 0",
-              )}
-            >
-              Choose any four toppings and build the bowl that is yours.
-              Customization is the whole point.
-            </p>
-          </div>
-          <div
-            style={css(
-              "padding: clamp(40px, 5vw, 70px) clamp(36px, 5vw, 64px); border-right: 1px solid #ECE6F0; border-bottom: 1px solid #ECE6F0",
-            )}
-          >
-            <div
-              style={css(
-                "font-family: 'Quicksand', sans-serif; font-size: 40px; color: #E5189A; margin-bottom: 22px",
-              )}
-            >
-              02
-            </div>
-            <div
-              style={css(
-                "font-size: 13px; letter-spacing: 0.28em; color: #3B1E4E; text-transform: uppercase; margin-bottom: 16px",
-              )}
-            >
-              Make to Order
-            </div>
-            <p
-              style={css(
-                "font-size: 16px; font-weight: 400; line-height: 1.9; color: #5A4F63; margin: 0",
-              )}
-            >
-              Nothing is pre-scooped or sitting out. Your bowl is built when you
-              walk in — which is exactly why we don't deliver.
-            </p>
-          </div>
-          <div
-            style={css(
-              "padding: clamp(40px, 5vw, 70px) clamp(36px, 5vw, 64px); border-bottom: 1px solid #ECE6F0",
-            )}
-          >
-            <div
-              style={css(
-                "font-family: 'Quicksand', sans-serif; font-size: 40px; color: #E5189A; margin-bottom: 22px",
-              )}
-            >
-              03
-            </div>
-            <div
-              style={css(
-                "font-size: 13px; letter-spacing: 0.28em; color: #3B1E4E; text-transform: uppercase; margin-bottom: 16px",
-              )}
-            >
-              Take It Anywhere
-            </div>
-            <p
-              style={css(
-                "font-size: 16px; font-weight: 400; line-height: 1.9; color: #5A4F63; margin: 0",
-              )}
-            >
-              Grab-and-go and sealed for the journey — a picnic, a study
-              session, a gym recovery, or time with yourself.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* CLOSING NOTE */}
-      <section
-        style={css(
-          "padding: clamp(70px, 10vw, 140px) clamp(40px, 7vw, 110px); display: flex; flex-direction: column; align-items: flex-start; gap: 30px",
-        )}
-      >
-        <p
-          style={css(
-            "font-family: 'Quicksand', sans-serif; font-style: italic; font-size: clamp(20px, 2.6vw, 34px); line-height: 1.5; color: #3B1E4E; max-width: 760px; margin: 0",
-          )}
-        >
-          Pick-up only, always. Because the best thing we make can't survive the
-          trip — and we'd never serve you anything less than its best.
-        </p>
-        <Link to="/contact" className="cta">
-          Visit Us <span style={css("font-size: 16px")}>→</span>
-        </Link>
+      <section className="sec wrap">
+        <div className="quote">
+          <p>Pick-up only, always.</p>
+          <div className="by">
+            Because the best thing we make can't survive the trip
+          </div>
+          <Link to="/contact" className="btn light" style={{ marginTop: 34 }}>
+            Visit us →
+          </Link>
+        </div>
       </section>
     </main>
   );
