@@ -20,24 +20,45 @@ export default function Menu() {
       fill: "both",
       ...opts,
     });
+  // matches the stylesheet's mobile breakpoint — small screens get a plain
+  // horizontal slide instead of the drop-and-rotate roll
+  const isMobile = () => window.matchMedia("(max-width: 860px)").matches;
   const rollIn = (i, delay = 0) =>
-    roll(
-      i,
-      [
-        { transform: "translateY(500px) rotate(-90deg)", opacity: 0 },
-        { transform: "translateY(0) rotate(0deg)", opacity: 1 },
-      ],
-      { duration: 800, delay },
-    );
+    isMobile()
+      ? roll(
+          i,
+          [
+            { transform: "translateX(120%)", opacity: 0 },
+            { transform: "translateX(0)", opacity: 1 },
+          ],
+          { duration: 500, delay },
+        )
+      : roll(
+          i,
+          [
+            { transform: "translateY(500px) rotate(-90deg)", opacity: 0 },
+            { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+          ],
+          { duration: 800, delay },
+        );
   const rollOut = (i) =>
-    roll(
-      i,
-      [
-        { transform: "translateY(0) rotate(0deg)", opacity: 1 },
-        { transform: "translateY(500px) rotate(90deg)", opacity: 0 },
-      ],
-      { duration: 600, easing: "ease-in" },
-    );
+    isMobile()
+      ? roll(
+          i,
+          [
+            { transform: "translateX(0)", opacity: 1 },
+            { transform: "translateX(-120%)", opacity: 0 },
+          ],
+          { duration: 400, easing: "ease-in" },
+        )
+      : roll(
+          i,
+          [
+            { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+            { transform: "translateY(500px) rotate(90deg)", opacity: 0 },
+          ],
+          { duration: 600, easing: "ease-in" },
+        );
 
   const select = (i) => {
     if (i === active) return rollIn(i);
